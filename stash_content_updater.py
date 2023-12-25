@@ -42,7 +42,27 @@ def find_images(performer_name):
           ) {{
             count,
             images {{
-              id
+              id,
+              studio {{
+                id,
+                name,
+                parent_studio {{
+                  id,
+                  name
+                }},
+                scene_count,
+                image_count,
+              }},
+              tags {{
+                id,
+                name,
+                description,
+                parents {{
+                	id,
+                  name
+                }}, 
+                image_count
+              }}
             }}
           }}
         }}
