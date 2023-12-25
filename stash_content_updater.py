@@ -9,7 +9,7 @@ logging.basicConfig(
 )
 
 def make_graphql_request(query, variables=None):
-    url = "http://10.0.0.25:9999/graphql"
+    url = f"{base_url}/graphql"
     headers = {"Content-Type": "application/json"}
     payload = {"query": query, "variables": variables}
     response = requests.post(url, headers=headers, json=payload)
@@ -192,4 +192,5 @@ def process_folders(base_folder):
         logging.error(f"Error processing folders: {str(e)}")
 
 base_folder = "S:\\Content Creators\\Exclusive Content"
+base_url = "http://10.0.0.25:9999"
 process_folders(base_folder)
