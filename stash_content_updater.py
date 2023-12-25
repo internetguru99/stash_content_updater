@@ -191,5 +191,5 @@ def process_folders(base_folder):
     except Exception as e:
         logging.error(f"Error processing folders: {str(e)}")
 
-base_folder = "/volumes/Documents/Testing/Exclusive Content"
+base_folder = "S:\\Content Creators\\Exclusive Content"
 process_folders(base_folder)
